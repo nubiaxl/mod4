@@ -115,8 +115,14 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       // 
-       
-      html = insertProperty( homeHtml, "{{" + chosenCategoryShortName + "}}", chosenCategoryShortName)
+      if (chosenCategoryShortName ==== "SP") {
+          html = insertProperty( homeHtml, "{{" + "randomCategoryShortName" + "}}", chosenCategoryShortName); 
+        }
+      else {
+
+          html = insertProperty( homeHtml, "{{" + chosenCategoryShortName + "}}", chosenCategoryShortName);
+      
+      }
       var homeHtmlToInsertIntoMainPage = insertHtml("#main-content", homeHtml);
       
 
@@ -316,7 +322,7 @@ function insertItemPrice(html,
                          priceValue) {
   // If not specified, replace with empty string
   if (!priceValue) {
-    return insertProperty(html, pricePropName, "");;
+    return insertProperty(html, pricePropName, "");
   }
 
   priceValue = "$" + priceValue.toFixed(2);
