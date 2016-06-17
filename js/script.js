@@ -117,7 +117,7 @@ function buildAndShowHomeHTML (categories) {
       // 
       
 
-      html = insertProperty( homeHtml, "{{" + randomCategoryShortName + "}}", chosenCategoryShortName);
+      html = insertProperty( homeHtml, "{{" + "randomCategoryShortName" + "}}", chosenCategoryShortName);
       
       
       var homeHtmlToInsertIntoMainPage = insertHtml("#main-content", homeHtml);
