@@ -115,14 +115,11 @@ function buildAndShowHomeHTML (categories) {
       // Hint: you need to surround the chosen category short name with something before inserting
       // it into the home html snippet.
       // 
-      if (chosenCategoryShortName ==== "SP") {
-          html = insertProperty( homeHtml, "{{" + "randomCategoryShortName" + "}}", chosenCategoryShortName); 
-        }
-      else {
-
-          html = insertProperty( homeHtml, "{{" + chosenCategoryShortName + "}}", chosenCategoryShortName);
       
-      }
+
+      html = insertProperty( homeHtml, "{{" + randomCategoryShortName + "}}", chosenCategoryShortName);
+      
+      
       var homeHtmlToInsertIntoMainPage = insertHtml("#main-content", homeHtml);
       
 
